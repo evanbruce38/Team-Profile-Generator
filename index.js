@@ -8,20 +8,20 @@ const employeeArray = [];
 
 function addManager() {
     inquirer
-    .createPromptModule([
+    .prompt([
         {
             type: 'input',
-            name: 'managerName',
+            name: 'name',
             message: "What is the name of this team's Manager?"
         },
         {
             type: 'input',
-            name: 'managerId',
+            name: 'id',
             message: "What is this Manager's ID number?"
         },
         {
             type: 'input',
-            name: 'managerEmail',
+            name: 'email',
             message: "what is this Manager's email address?"
         },
         {
@@ -29,9 +29,9 @@ function addManager() {
             name:'officeNumber',
             message: "What is this Manager's office number?"
         }
-    ]);
+    ])
     .then(answers => {
-        const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.officeNumber);
+        const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
         employeeArray.push(manager);
         addTeamMember();
     });
@@ -45,7 +45,7 @@ function addTeamMember() {
             name: 'addTeamMember',
             message: 'What would you like to do next?',
             choices: ['Add an Engineer', 'Add an Intern', 'Done building my team!']
-        };
+        }
     ])
     .then(answers => {
         if (answers.addTeamMember == 'Add an Engineer') {
@@ -66,17 +66,17 @@ function addEngineer() {
     .prompt([
         {
             type: 'input',
-            name: 'engineerName',
+            name: 'name',
             message: 'What is the name of this Engineer?'
         },
         {
             type: 'input',
-            name: 'engineerId',
+            name: 'id',
             message: "What is this Engineer's ID number?"
         },
         {
             type: 'input',
-            name: 'engineerEmail',
+            name: 'email',
             message: "What is this Engineer's email adress?"
         },
         {
@@ -84,9 +84,9 @@ function addEngineer() {
             name: 'github',
             message: "What is this Engineer's github?"
         }
-    ]);
+    ])
     .then(answers => {
-        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.github);
+        const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
         employeeArray.push(engineer);
         addTeamMember();
     });
@@ -97,17 +97,17 @@ function addIntern() {
     .prompt([
         {
             type: 'input',
-            name: 'internName',
+            name: 'name',
             message: 'What is the name of this Intern?'
         },
         {
             type: 'input',
-            name: 'internId',
+            name: 'id',
             message: "What is this Intern's ID number?"
         },
         {
             type: 'input',
-            name: 'internEmail',
+            name: 'email',
             message: "What is this Intern's email adress?"
         },
         {
@@ -115,9 +115,9 @@ function addIntern() {
             name: 'school',
             message: "What school does this Intern attend?"
         }
-    ]);
+    ])
     .then(answers => {
-        const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.school);
+        const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
         employeeArray.push(intern);
         addTeamMember();
     });
