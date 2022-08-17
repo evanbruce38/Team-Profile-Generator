@@ -6,4 +6,14 @@ test('set a name', () => {
     expect(newEmployee.name).toBe("Dave");
 });
 
+test('set an id', () => {
+    const newEmployee = new Employee('Dave', 1, "dave@mail.com");
 
+    expect(newEmployee.id).toBe(1);
+});
+
+test('set an email', () => {
+    const newEmployee = new Employee('Dave', 1, "dave@mail.com");
+
+    expect(newEmployee.email).toBe("dave@mail.com");
+});
