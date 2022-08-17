@@ -6,7 +6,7 @@ test('Set a github', () => {
     expect(newEngineer.github).toBe('jacobgithub');
 });
 
-test('test for get github', () => {
+test('test for getgithub', () => {
     const newEngineer = new Engineer('Jacob', 1, 'jacob@mail.com', 'jacobgithub');
 
     expect(newEngineer.getGithub()).toBe('jacobgithub');
