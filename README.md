@@ -5,6 +5,9 @@
 
   * This project creates a team profile webpage with cards that display team member information. The team members have classes of Manager, Engineer, and intern. Each team member has a functioning email link and engineer's have a functioning link to their respective githubs. This project was created using Javascript, html, css, jest, and node.
 
+  ## Demonstration video
+  https://drive.google.com/file/d/12nTDiWBQsY_2Rix54UdD-xXPe9BALUbA/view
+
   ## Table of Contents
 
   * [Usage](#usage)
