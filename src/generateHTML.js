@@ -55,4 +55,4 @@ function generateHTML(employeeArray) {
     `;
   }
   
-  module.exports = generateHTML;
+module.exports = generateHTML;

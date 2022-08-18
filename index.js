@@ -54,7 +54,7 @@ function addTeamMember() {
             addIntern();
         } else {
             const generatedHTML = generateHTML(employeeArray);
-            fs.writeFile('./dist/index/html', generatedHTML, () => {
+            fs.writeFile('./dist/index.html', generatedHTML, () => {
             console.log('HTML has been succesfully generated!');
             });
         };
